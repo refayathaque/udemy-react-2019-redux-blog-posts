@@ -1,8 +1,7 @@
 import jsonPlaceholder from 'apis/jsonPlaceholder';
 
-export const fetchPosts = () => {
+const fetchPosts = () => {
   console.log('ACTION CREATOR, fetchPosts')
-
   return async (dispatch) => {
     const response = await jsonPlaceholder.get('/posts');
     console.log('ACTION CREATOR, fetchPosts, response: ', response)
@@ -12,6 +11,8 @@ export const fetchPosts = () => {
     })
   }
 }
+
+export default fetchPosts
 
 // Async actions with Redux-Thunk middleware
 // With Redux-Thunk we can RETURN A FUNCTION with our action creators (instead of only a plain action object), and when we do this, the function will be invoked with the 'dispatch' and 'getState' (optional) functions from Redux as arguments
