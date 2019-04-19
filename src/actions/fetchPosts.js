@@ -4,10 +4,10 @@ const fetchPosts = () => {
   console.log('ACTION CREATOR, fetchPosts')
   return async (dispatch) => {
     const response = await jsonPlaceholder.get('/posts');
-    console.log('ACTION CREATOR, fetchPosts, response: ', response)
+    console.log('ACTION CREATOR, fetchPosts, response.data: ', response.data)
     dispatch({
       type: 'FETCH_POSTS',
-      payload: response
+      payload: response.data
     })
   }
 }
