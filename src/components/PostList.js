@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import fetchPosts from 'actions/fetchPosts';
+import UserHeader from 'components/UserHeader';
 
 // Components are generally responsible for fetching data they need by calling an action creator
 // ^ from the 'componentDidMount' lifecycle method
@@ -26,6 +27,7 @@ class PostList extends Component {
               <p>
                 {post.body}
               </p>
+              <UserHeader userId={post.userId} />
             </div>
           </div>
         </div>
@@ -43,7 +45,7 @@ class PostList extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('COMPONENT, PostList, state: ', state)
+  console.log('COMPONENT, PostList, mapStateToProps, state: ', state)
   return {
     posts: state.posts
   }
