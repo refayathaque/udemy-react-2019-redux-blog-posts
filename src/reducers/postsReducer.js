@@ -9,7 +9,7 @@ const postsReducer = (state = [], action) => {
       console.log('REDUCER, postsReducer, action.payload: ', action.payload)
       return action.payload
     default:
-      console.log('REDUCER, postsReducer, default state: ', state)
+      // console.log('REDUCER, postsReducer, default state: ', state)
       return state;
   }
 }
