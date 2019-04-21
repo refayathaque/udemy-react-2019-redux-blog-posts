@@ -19,7 +19,7 @@ class PostList extends Component {
         <div className="item" key={post.id}>
           <i className="large middle aligned icon user" />
           <div className="content">
-            <div classname="description">
+            <div className="description">
               <h2>
                 {post.title}
               </h2>
