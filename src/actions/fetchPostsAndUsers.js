@@ -5,7 +5,7 @@ import _ from 'lodash';
 const fetchPostsAndUsers = () => {
   console.log('ACTION CREATOR, fetchPostsAndUsers')
   return async (dispatch, getState) => {
-    // getState argument gives us access to the Redux store
+    // getState argument from Redux-Thunk gives us access to the Redux store
     await dispatch(fetchPosts())
     // We need to make sure that when we call the action creator `fetchPosts` whatever action/function it returns gets dispatched as well, that way we are ensuring that the returned action/function from `fetchPosts` goes through our Redux/Middlewares pipeline before going into the reducers
     // We are MANUALLY DISPATCHING the results of calling the action creator `fetchPosts`, which in this case is the inner function inside `fetchPosts` that actually makes the API call
