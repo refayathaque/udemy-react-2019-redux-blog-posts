@@ -14,6 +14,8 @@ class PostList extends Component {
     this.props.fetchPostsAndUsers();
   }
 
+  // To create lists in React components that will work with JSX you must use the map() function and not the forEach() function - https://codeburst.io/javascript-map-vs-foreach-f38111822c0f
+
   renderList() {
     return this.props.posts.map(post => {
       return (
