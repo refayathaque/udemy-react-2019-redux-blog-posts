@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import fetchPosts from 'actions/fetchPosts';
+import fetchPostsAndUsers from 'actions/fetchPostsAndUsers';
 import UserHeader from 'components/UserHeader';
 
 // Components are generally responsible for fetching data they need by calling an action creator
@@ -11,7 +11,7 @@ import UserHeader from 'components/UserHeader';
 class PostList extends Component {
 
   componentDidMount() {
-    this.props.fetchPosts();
+    this.props.fetchPostsAndUsers();
   }
 
   renderList() {
@@ -52,6 +52,6 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {
-  // fetchPosts: fetchPosts
-  fetchPosts
+  // fetchPostsAndUsers: fetchPostsAndUsers
+  fetchPostsAndUsers
 })(PostList)
